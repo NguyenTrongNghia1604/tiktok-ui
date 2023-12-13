@@ -1,0 +1,77 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    min-width: 100px;
+    padding: 9px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--white);
+    border: 1px solid transparent;
+
+    + .wrapper {
+        margin-left: 8px;
+    }
+    transition: all 0.5s;
+
+    &.disabled {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(255, 255, 255);
+        cursor: none;
+    }
+}
+
+.icon + .title,
+title + .icon {
+    margin-left: 8px;
+}
+
+// button types
+.rounded {
+    border-radius: 999px;
+    color: rgba(22, 24, 35, 0.6);
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 1) 2px 2px 2px 2px;
+    border-color: rgba(22, 24, 35, 0.32);
+    transition: all 0.5s;
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06));
+    }
+}
+
+.primary {
+    background-color: rgb(254, 44, 85);
+    color: #fff;
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+    }
+}
+.outline {
+    color: var(--primary);
+    border-color: currentColor;
+
+    &:hover {
+        background-color: 1px solid rgba(254, 44, 85, 0.06);
+    }
+}
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+// button sizes
+.small {
+    min-width: 88px;
+    padding: 4px 12px;
+}
+
+.large {
+    min-width: 140px;
+    padding: 14px 16px;
+}
+
+.curr-login {
+    color: red;
+}

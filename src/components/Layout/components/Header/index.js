@@ -8,6 +8,7 @@ import images from '~/assets/images';
 
 import { wrapper as PopperWrapper } from '~/components/Popper';
 
+import Button from '~/components/Button';
 // import Tippy from '@tippyjs/react';
 // import 'tippy.js/dist/tippy.css'; // optional
 // import React from 'react';
@@ -56,7 +57,10 @@ function Header() {
                     </div>
                 </Tippy>
                 <div className={cx('actions')}>
-                    <h1>chào</h1>
+                    <Button text>Upload</Button>
+                    <Button primary leftIcon={<FontAwesomeIcon icon={faSignIn} />}>
+                        Login
+                    </Button>
                 </div>
             </div>
         </header>
