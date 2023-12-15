@@ -1,7 +1,16 @@
 import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSearchLocation, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCircleXmark,
+    faSearchLocation,
+    faSpinner,
+    faSignIn,
+    faEllipsisVertical,
+    faLanguage,
+    faCircleQuestion,
+    faKeyboard,
+} from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -14,6 +23,25 @@ import Button from '~/components/Button';
 // import React from 'react';
 import Tippy from '@tippyjs/react/headless'; // different import path!
 import AccountItem from '~/components/AccountItem';
+
+// menu
+import Menu from '~/components/Popper/Menu';
+
+const MENU_ITEM = [
+    {
+        icon: <FontAwesomeIcon icon={faLanguage} />,
+        title: 'English',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+        title: 'Feedback and help',
+        to: './feedback',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faKeyboard} />,
+        title: 'KeyBoard shortcuts',
+    },
+];
 
 const cx = classNames.bind(styles);
 function Header() {
@@ -31,7 +59,7 @@ function Header() {
                 </div>
                 <Tippy
                     interactive
-                    visible={searchResult.length > 0}
+                    // visible={searchResult.length > 0}
                     render={(attrs) => (
                         <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                             <PopperWrapper>
@@ -61,6 +89,11 @@ function Header() {
                     <Button primary leftIcon={<FontAwesomeIcon icon={faSignIn} />}>
                         Login
                     </Button>
+                    <Menu items={MENU_ITEM}>
+                        <button className={cx('more-btn')}>
+                            <FontAwesomeIcon icon={faEllipsisVertical} />
+                        </button>
+                    </Menu>
                 </div>
             </div>
         </header>

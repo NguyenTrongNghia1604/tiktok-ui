@@ -89,6 +89,13 @@
             }
         }
         .actions {
+            .more-btn {
+                font-size: 2rem;
+                margin-left: 17px;
+                background: transparent;
+                cursor: pointer;
+                padding: 5px 10px;
+            }
         }
     }
 }
