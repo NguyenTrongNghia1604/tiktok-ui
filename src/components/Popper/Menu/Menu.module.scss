@@ -8,8 +8,29 @@
 .menu-items {
     width: 100%;
     justify-content: flex-start;
+    border-radius: 0;
+    padding: 11px 16px;
+    line-height: 1.8rem;
     cursor: pointer;
     &:hover {
         background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+}
+
+// Menu header
+.header {
+    position: relative;
+    height: 50px;
+    .back-btn {
+        width: 50px;
+        height: 100%;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .header-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
