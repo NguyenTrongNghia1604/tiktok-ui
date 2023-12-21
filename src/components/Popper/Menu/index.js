@@ -38,6 +38,7 @@ function Memu({ children, items = [], onChange = defaultFn }) {
         <Tippy
             interactive
             delay={[0, 1000]}
+            offset={[10, 10]}
             placement="bottom-end"
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
@@ -54,6 +55,7 @@ function Memu({ children, items = [], onChange = defaultFn }) {
                     </PopperWrapper>
                 </div>
             )}
+            onHide={() => setHistory((prve) => prve.slice(0, 1))}
         >
             {children}
         </Tippy>

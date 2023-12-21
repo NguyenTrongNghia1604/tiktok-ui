@@ -1,7 +1,7 @@
 import 'tippy.js/dist/tippy.css'; // optional
-import Tippy from '@tippyjs/react/headless'; // different import path!
+// import Tippy from '@tippyjs/react/headless'; // different import path!
 // import React from 'react';
-import { wrapper as PopperWrapper } from '~/components/Popper';
+// import { wrapper as PopperWrapper } from '~/components/Popper';
 import classNames from 'classnames/bind';
 import styles from './Menu.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

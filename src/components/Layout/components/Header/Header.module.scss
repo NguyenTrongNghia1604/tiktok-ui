@@ -89,7 +89,27 @@
                 }
             }
         }
+
         .actions {
+            display: flex;
+
+            .action-btn {
+                background-color: transparent;
+                color: #161823;
+                font-size: 2.2rem;
+                margin: 4px 12px;
+                cursor: pointer;
+            }
+
+            .user-avatar {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin: 4px 12px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+
             .more-btn {
                 font-size: 2rem;
                 margin-left: 17px;

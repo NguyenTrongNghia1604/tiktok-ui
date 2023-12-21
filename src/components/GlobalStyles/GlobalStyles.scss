@@ -38,3 +38,17 @@ a[href] {
     text-decoration: none;
     color: var(--text-color);
 }
+
+// custom tippy tooltip
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        background-color: rgba($color: #000000, $alpha: 0.62);
+    }
+    .tippy-arrow {
+        color: rgba($color: #000000, $alpha: 0.62);
+    }
+}
