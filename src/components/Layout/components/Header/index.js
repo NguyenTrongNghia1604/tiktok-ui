@@ -32,6 +32,9 @@ import AccountItem from '~/components/AccountItem';
 // menu
 import Menu from '~/components/Popper/Menu';
 
+// Image
+import Image from '~/components/Image';
+
 const MENU_ITEM = [
     {
         icon: <FontAwesomeIcon icon={faLanguage} />,
@@ -160,10 +163,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEM} onChange={hanldMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
-                                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/0fb49c727e342c90beb7c9dbeb56f3e4.jpeg?x-expires=1703318400&x-signature=pS2a8e7vPHUNg8pL8mDNzcYrjp8%3D"
+                                src="https://p1-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/0fb49c727e342c90beb7c9dbeb56f3e4.jpeg?x-expires=1703318400&x-signature=pS2a8e7vPHUNg8pL8mDNzcYrjp8%3D"
                                 alt="errr"
+                                // fallback="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/5b214eead93ba591b6495e6417d55dd8~c5_100x100.jpeg?x-expires=1703595600&x-signature=26ZdjFnmr4VpUFWIA8%2FVfntrHq0%3D"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
